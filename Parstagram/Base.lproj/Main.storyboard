@@ -80,12 +80,59 @@
         <scene sceneID="ODY-KS-zi5">
             <objects>
                 <viewController id="S4Y-1e-Pkc" customClass="FeedViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zhn-mS-JWG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hGo-Sm-4f1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="aHW-2x-bWB"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="350" id="IIU-A3-FEi" customClass="PostTableViewCell" customModule="Parstagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="350"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IIU-A3-FEi" id="GoC-iC-yeP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCO-JX-Erg">
+                                            <rect key="frame" x="8" y="8" width="398" height="305"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="tCO-JX-Erg" secondAttribute="height" multiplier="398:305" id="63M-z1-0EK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="johnappleseed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-YI-wNu">
+                                            <rect key="frame" x="8" y="321" width="120" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wow, I love photos!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9va-ul-6o6">
+                                            <rect key="frame" x="136" y="321" width="147" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9va-ul-6o6" firstAttribute="leading" secondItem="Qea-YI-wNu" secondAttribute="trailing" constant="8" id="42x-bU-B0K"/>
+                                        <constraint firstItem="Qea-YI-wNu" firstAttribute="leading" secondItem="GoC-iC-yeP" secondAttribute="leading" constant="8" id="5zn-da-77j"/>
+                                        <constraint firstItem="tCO-JX-Erg" firstAttribute="top" secondItem="GoC-iC-yeP" secondAttribute="top" constant="8" id="C9f-3Y-XVb"/>
+                                        <constraint firstItem="Qea-YI-wNu" firstAttribute="top" secondItem="tCO-JX-Erg" secondAttribute="bottom" constant="8" id="Dts-Fh-z12"/>
+                                        <constraint firstItem="9va-ul-6o6" firstAttribute="leading" secondItem="Qea-YI-wNu" secondAttribute="trailing" constant="8" id="ETx-68-J5V"/>
+                                        <constraint firstItem="Qea-YI-wNu" firstAttribute="top" secondItem="tCO-JX-Erg" secondAttribute="bottom" constant="8" id="FnZ-1k-AP5"/>
+                                        <constraint firstItem="9va-ul-6o6" firstAttribute="top" secondItem="tCO-JX-Erg" secondAttribute="bottom" constant="8" id="Tl6-lB-SvJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="tCO-JX-Erg" secondAttribute="trailing" constant="8" id="Y5E-FN-nJh"/>
+                                        <constraint firstItem="tCO-JX-Erg" firstAttribute="leading" secondItem="GoC-iC-yeP" secondAttribute="leading" constant="8" id="gm1-cD-iqY"/>
+                                        <constraint firstAttribute="trailing" secondItem="9va-ul-6o6" secondAttribute="trailing" constant="8" id="jXX-dG-Htj"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9va-ul-6o6" secondAttribute="bottom" constant="8" id="z8m-1l-x3a"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="captionLabel" destination="9va-ul-6o6" id="Ue4-co-Dc8"/>
+                                    <outlet property="photoView" destination="tCO-JX-Erg" id="oL5-rX-9CU"/>
+                                    <outlet property="usernameLabel" destination="Qea-YI-wNu" id="EAj-3E-yIj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <navigationItem key="navigationItem" id="KSE-U3-wZV">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="k0X-DZ-Ya1">
                             <connections>
@@ -93,10 +140,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hGo-Sm-4f1" id="iCe-O2-4QL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPW-Y5-Wda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520" y="94"/>
+            <point key="canvasLocation" x="1518.840579710145" y="93.75"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="lgk-GN-JVp">
