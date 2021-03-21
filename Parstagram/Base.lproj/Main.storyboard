@@ -199,7 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uki-XA-MBP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9cF-U3-kD2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="9cF-U3-kD2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9K9-25-KnM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
