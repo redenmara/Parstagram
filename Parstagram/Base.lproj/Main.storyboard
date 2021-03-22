@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="350" id="IIU-A3-FEi" customClass="PostTableViewCell" customModule="Parstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="350" id="IIU-A3-FEi" customClass="PostTableViewCell" customModule="Parstagram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IIU-A3-FEi" id="GoC-iC-yeP">
@@ -129,6 +129,42 @@
                                     <outlet property="captionLabel" destination="9va-ul-6o6" id="Ue4-co-Dc8"/>
                                     <outlet property="photoView" destination="tCO-JX-Erg" id="oL5-rX-9CU"/>
                                     <outlet property="usernameLabel" destination="Qea-YI-wNu" id="EAj-3E-yIj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentTableViewCell" id="x41-Hl-JHe" customClass="CommentTableViewCell" customModule="Parstagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="378" width="414" height="37.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x41-Hl-JHe" id="SqB-n2-bGX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5F-xc-cxD">
+                                            <rect key="frame" x="16" y="8" width="46" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me too!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-pp-JSe">
+                                            <rect key="frame" x="70" y="8" width="58" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="J5F-xc-cxD" firstAttribute="leading" secondItem="SqB-n2-bGX" secondAttribute="leading" constant="16" id="5at-j8-1Ke"/>
+                                        <constraint firstItem="J5F-xc-cxD" firstAttribute="top" secondItem="SqB-n2-bGX" secondAttribute="top" constant="8" id="9GK-gd-K2b"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nal-pp-JSe" secondAttribute="trailing" constant="8" id="LTC-V2-YqY"/>
+                                        <constraint firstItem="Nal-pp-JSe" firstAttribute="leading" secondItem="J5F-xc-cxD" secondAttribute="trailing" constant="8" id="ciz-65-zJ6"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="J5F-xc-cxD" secondAttribute="bottom" constant="8" id="hih-4M-j1v"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nal-pp-JSe" secondAttribute="bottom" constant="8" id="rGk-4T-Nws"/>
+                                        <constraint firstItem="Nal-pp-JSe" firstAttribute="top" secondItem="SqB-n2-bGX" secondAttribute="top" constant="8" id="u6O-hc-xDW"/>
+                                        <constraint firstItem="Nal-pp-JSe" firstAttribute="leading" secondItem="J5F-xc-cxD" secondAttribute="trailing" constant="8" id="xny-kf-I8t"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="Nal-pp-JSe" id="Zpq-eb-Ihq"/>
+                                    <outlet property="nameLabel" destination="J5F-xc-cxD" id="2yX-EH-fWB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
